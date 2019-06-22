@@ -24,13 +24,22 @@ Graph::Graph(int v) {
 }
 
 void Graph::AddEdge(int v, int w) {
+    if (v >= n) {
+        cout << "Node does not exist.";
+    }
+    if (w >= n) {
+        cout << "Node does not exist.";
+    }
     matrix[v][w] = 1;
     matrix[w][v] = 1;
 
 }
 
 void Graph::DeleteEdge(int v, int w) {
-
+    if (v > n || w > n || matrix[v][w] == 0) {
+        cout << "Graph is empty.";
+    }
+    matrix[v][w] = 0;
 }
 
 void Graph::PrintMatrix() {
