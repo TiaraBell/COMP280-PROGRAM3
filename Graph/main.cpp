@@ -14,6 +14,7 @@
 #include <cstdlib>
 
 #include "Graph.h"
+#include <iostream>
 
 using namespace std;
 
@@ -22,10 +23,9 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     char selection;
-    Graph G;
     int v;
     int w;
-    const char SENTINEL = '6';
+    const char SENTINEL = '9';
 
     cout << "Let's create your graph!" << endl;
     cout << "Menu" << endl;
@@ -41,6 +41,7 @@ int main(int argc, char** argv) {
 
     cout << "Enter the number of vertices this graph contain: ";
     cin >> v;
+    Graph G(v);
     cout << v << endl;
     cout << "Enter a number 1-9 for your menu selection: ";
     cin >> selection;
@@ -55,6 +56,7 @@ int main(int argc, char** argv) {
                 cin >> w;
                 cout << v << ", " << w << endl;
                 G.AddEdge(v, w);
+    
 
             }
                 break;
@@ -83,14 +85,14 @@ int main(int argc, char** argv) {
                 break;
             case '5':
             {
-                cout << "Here are your vertices using Depth First Search: " << 
-                        G.PrintDepthFirst();
+                cout << "Here are your vertices using Depth First Search: ";
+                G.PrintDepthFirst();
             }
                 break;
             case '6':
             {
-                cout << "Here are your vertices using Breadth First Search: " << 
-                        G.PrintBreadthFirst();
+                cout << "Here are your vertices using Breadth First Search: ";
+                G.PrintBreadthFirst();
             }
                 break;
             case '7':

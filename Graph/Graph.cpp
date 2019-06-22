@@ -12,17 +12,20 @@
  */
 
 #include "Graph.h"
+#include <iostream>
+using namespace std;
 
-Graph::Graph() {
-    int n = 0; // number of vertices
-    int matrix[MAX][MAX] = {}; //adjacency matrix
-    bool visited[MAX] = false;
-}
 
 Graph::Graph(int v) {
+    int n = 0; // number of vertices
+    this->n = v;
+    int matrix[MAX][MAX]; //adjacency matrix
+    bool visited[MAX];
 }
 
 void Graph::AddEdge(int v, int w) {
+    matrix[v][w] = 1;
+    matrix[w][v] = 1;
 
 }
 
@@ -31,11 +34,18 @@ void Graph::DeleteEdge(int v, int w) {
 }
 
 void Graph::PrintMatrix() {
+    int v = n;
+    for (int i = 0; i < v; i++) {
+        for(int j = 0; j < v; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 
 }
 
 int Graph::PrintAdjacent(int v) {
-
+    return 0;
 }
 
 void Graph::PrintDepthFirst() {

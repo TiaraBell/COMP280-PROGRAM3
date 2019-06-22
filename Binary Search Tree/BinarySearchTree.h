@@ -14,15 +14,9 @@
 #ifndef BINARYSEARCHTREE_H
 #define BINARYSEARCHTREE_H
 
-struct dish {
+struct node {
     int dishNumber;
     int counter;
-};
-
-typedef dish ElementType;
-
-struct node {
-    ElementType data;
     node * leftchild;
     node * rightchild;
 };
@@ -30,10 +24,10 @@ struct node {
 class BinarySearchTree {
 public:
     BinarySearchTree();
-    bool empty(); // return true if the tree is empty, otherwise return false
-    bool Insert(ElementType x); //insert a value x 
-    bool IsThere(ElementType x);
-    //return true if x is in the tree, otherwise return false
+    bool Empty(); // return true if the tree is empty, otherwise return false
+    bool Insert(int dishNum); //insert a value dishNum 
+    bool IsThere(int dishNum);
+    //return true if dishNum is in the tree, otherwise return false
     void Display();
     //Display the data stored from smallest to largest based on dish number
 

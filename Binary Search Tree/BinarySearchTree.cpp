@@ -12,13 +12,30 @@
  */
 
 #include "BinarySearchTree.h"
+#include <iostream>
+using namespace std;
 
 BinarySearchTree::BinarySearchTree() {
+    root = NULL;
 }
 
-BinarySearchTree::BinarySearchTree(const BinarySearchTree& orig) {
+bool BinarySearchTree::Empty() {
+    if (root == NULL) {
+        return true;
+    }
+    return false;
 }
 
-BinarySearchTree::~BinarySearchTree() {
+bool BinarySearchTree::Insert(int dishNum) {
+    cout << dishNum << endl;
+    return true;
+}
+
+bool BinarySearchTree::IsThere(int dishNum) {
+    return true;
+}
+
+void BinarySearchTree::Display() {
+  
 }
 
