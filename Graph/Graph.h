@@ -28,24 +28,24 @@ public:
     void DeleteEdge(int v, int w);
     //delete the edge between v and w
 
-    int printAdjacent(int v);
+    int PrintAdjacent(int v);
     //print all vertices that are adjacent to v
 
-    void printMatrix();
+    void PrintMatrix();
     /* print the content of the adjacency matrix with one row per line of output. */
 
     //Add in other methods as needed
     
-    void printDepthFirst();
+    void PrintDepthFirst();
     //Prints out vertices using depth first search
     
-    void printBreadthFirst();
+    void PrintBreadthFirst();
     //Prints out vertices using breadth first search
     
-    bool isConnected();
+    bool IsConnected();
     //checks for connectivity
     
-    bool isComplete();
+    bool IsComplete();
     //checks for completeness
     
 private:

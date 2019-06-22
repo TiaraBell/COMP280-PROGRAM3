@@ -14,11 +14,43 @@
 #include "Graph.h"
 
 Graph::Graph() {
+    int n = 0; // number of vertices
+    int matrix[MAX][MAX] = {}; //adjacency matrix
+    bool visited[MAX] = false;
 }
 
-Graph::Graph(const Graph& orig) {
+Graph::Graph(int v) {
 }
 
-Graph::~Graph() {
+void Graph::AddEdge(int v, int w) {
+
+}
+
+void Graph::DeleteEdge(int v, int w) {
+
+}
+
+void Graph::PrintMatrix() {
+
+}
+
+int Graph::PrintAdjacent(int v) {
+
+}
+
+void Graph::PrintDepthFirst() {
+
+}
+
+void Graph::PrintBreadthFirst() {
+
+}
+
+bool Graph::IsConnected() {
+    return false;
+}
+
+bool Graph::IsComplete() {
+    return false;
 }
 

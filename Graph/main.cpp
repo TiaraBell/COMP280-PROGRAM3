@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
                 break;
             case '3':
             {
-                G.printMatrix();
+                G.PrintMatrix();
             }
                 break;
             case '4':
@@ -78,29 +78,29 @@ int main(int argc, char** argv) {
                 cout << "Enter the vertex you want to know more about: ";
                 cin >> v;
                 cout << v << endl;
-                G.printAdjacent(v);
+                G.PrintAdjacent(v);
             }
                 break;
             case '5':
             {
                 cout << "Here are your vertices using Depth First Search: " << 
-                        G.printDepthFirst();
+                        G.PrintDepthFirst();
             }
                 break;
             case '6':
             {
                 cout << "Here are your vertices using Breadth First Search: " << 
-                        G.printBreadthFirst();
+                        G.PrintBreadthFirst();
             }
                 break;
             case '7':
             {
-                cout << "Is graph connected?: " << G.isConnected();
+                cout << "Is graph connected?: " << G.IsConnected();
             }
                 break;
             case '8':
             {
-                cout << "Is graph complete: " << G.isComplete();
+                cout << "Is graph complete: " << G.IsComplete();
             }
                 break;
                 //If anything else is entered besides the current selections
