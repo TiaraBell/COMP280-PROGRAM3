@@ -52,8 +52,7 @@ int main(int argc, char** argv) {
             case '1':
             {
                 cout << "Please enter the two vertices for the edge you want to add: ";
-                cin >> v;
-                cin >> w;
+                cin >> v >> w;
                 cout << v << ", " << w << endl;
                 G.AddEdge(v, w);
     
@@ -63,8 +62,7 @@ int main(int argc, char** argv) {
             case '2':
             {
                 cout << "Please enter the two vertices for the edge you want to remove: ";
-                cin >> v;
-                cin >> w;
+                cin >> v >> w;
                 cout << v << ", " << w << endl;
                 G.DeleteEdge(v, w);
 

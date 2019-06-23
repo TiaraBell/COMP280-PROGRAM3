@@ -15,7 +15,6 @@
 #include <iostream>
 using namespace std;
 
-
 Graph::Graph(int v) {
     int n = 0; // number of vertices
     this->n = v;
@@ -25,10 +24,10 @@ Graph::Graph(int v) {
 
 void Graph::AddEdge(int v, int w) {
     if (v >= n) {
-        cout << "Node does not exist.";
+        cout << "Node does not exist." << endl;
     }
     if (w >= n) {
-        cout << "Node does not exist.";
+        cout << "Node does not exist." << endl;
     }
     matrix[v][w] = 1;
     matrix[w][v] = 1;
@@ -37,15 +36,16 @@ void Graph::AddEdge(int v, int w) {
 
 void Graph::DeleteEdge(int v, int w) {
     if (v > n || w > n || matrix[v][w] == 0) {
-        cout << "Graph is empty.";
+        cout << "Node does not exist.";
     }
     matrix[v][w] = 0;
+    matrix[w][v] = 0;
 }
 
 void Graph::PrintMatrix() {
     int v = n;
     for (int i = 0; i < v; i++) {
-        for(int j = 0; j < v; j++) {
+        for (int j = 0; j < v; j++) {
             cout << matrix[i][j] << " ";
         }
         cout << endl;
@@ -54,6 +54,31 @@ void Graph::PrintMatrix() {
 }
 
 int Graph::PrintAdjacent(int v) {
+    cout << v << " --> ";
+    for (int i = 0; i < n; i++) {
+        if (i > 0) {
+            cout << ", ";
+        }
+        cout << matrix[i][v];
+    }
+    cout << endl;
+    //    node* current = first;
+    //        while (current != NULL) {
+    //            for (int i = 0; i < n; i++) {
+    //                if (i > 0) {
+    //                    cout << ", ";
+    //                }
+    //                cout << current->data;
+    //                current = current->next;
+    //            }
+    //        }
+    //    for (int i = 0; i < v; i++) {
+    //        for (int j = 0; j < v; j++) {
+    //            if (i = v) {
+    //                cout << i << ", ";
+    //            }
+    //        }
+    //    }
     return 0;
 }
 
