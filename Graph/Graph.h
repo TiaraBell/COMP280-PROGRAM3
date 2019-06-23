@@ -39,6 +39,9 @@ public:
     void PrintDepthFirst();
     //Prints out vertices using depth first search
     
+    void DepthFirstUtil(int v, bool visited[]);
+    //Helper function for Depth First Search
+    
     void PrintBreadthFirst();
     //Prints out vertices using breadth first search
     

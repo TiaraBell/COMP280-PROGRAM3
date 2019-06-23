@@ -50,7 +50,6 @@ void Graph::PrintMatrix() {
         }
         cout << endl;
     }
-
 }
 
 int Graph::PrintAdjacent(int v) {
@@ -62,39 +61,47 @@ int Graph::PrintAdjacent(int v) {
         cout << matrix[i][v];
     }
     cout << endl;
-    //    node* current = first;
-    //        while (current != NULL) {
-    //            for (int i = 0; i < n; i++) {
-    //                if (i > 0) {
-    //                    cout << ", ";
-    //                }
-    //                cout << current->data;
-    //                current = current->next;
-    //            }
-    //        }
-    //    for (int i = 0; i < v; i++) {
-    //        for (int j = 0; j < v; j++) {
-    //            if (i = v) {
-    //                cout << i << ", ";
-    //            }
-    //        }
-    //    }
     return 0;
 }
 
-void Graph::PrintDepthFirst() {
-
-}
-
-void Graph::PrintBreadthFirst() {
-
-}
-
-bool Graph::IsConnected() {
-    return false;
-}
-
-bool Graph::IsComplete() {
-    return false;
-}
+//void Graph::PrintDepthFirst() {
+//    int v = n;
+//    for (int i = 0; i < v; i++) {
+//        visited[i] = false;
+//    }
+//    DepthFirstUtil(v, visited);
+////    //visited[] = false;
+////    for (int i = 0; i < n; i++) {
+////        for (int j = 0; j < n; j++) {
+////            if (!visited[i] && matrix[i][j] == 1) {
+////
+////            }
+////        }
+////    }
+//}
+//
+//void Graph::DepthFirstUtil(int v, bool visited[]) {
+//    visited[v] = true;
+//    cout << v << " ";
+//    
+//    for (int i = 0; i < n; i++) {
+//        for (int j = 0; j < n; j++) {
+//            if (!visited[v]) {
+//                DepthFirstUtil(v, visited);
+//            }
+//        }
+//    }
+//}
+//
+//void Graph::PrintBreadthFirst() {
+//
+//}
+//
+//bool Graph::IsConnected() {
+//    return false;
+//}
+//
+//bool Graph::IsComplete() {
+//    return false;
+//}
 

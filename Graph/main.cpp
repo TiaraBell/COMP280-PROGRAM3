@@ -33,16 +33,23 @@ int main(int argc, char** argv) {
     cout << "2. Delete Edge" << endl; //Allows the user to delete an edge
     cout << "3. Display Matrix" << endl; //Prints out the adjacency matrix
     cout << "4. Display Adjacent Vertices" << endl; //Prints out the vertices that are adjacent to the user inputed vertex
-    cout << "5. Display Depth First Search" << endl; //Prints out vertices using depth first search
-    cout << "6. Display Breadth First Search" << endl; //Prints out vertices using breadth first search
-    cout << "7. Check for connectivity" << endl; //Prints out whether the graph is connected or not
-    cout << "8. Check for completeness" << endl; //Prints out whether the graph is complete or not
+//    cout << "5. Display Depth First Search" << endl; //Prints out vertices using depth first search
+//    cout << "6. Display Breadth First Search" << endl; //Prints out vertices using breadth first search
+//    cout << "7. Check for connectivity" << endl; //Prints out whether the graph is connected or not
+//    cout << "8. Check for completeness" << endl; //Prints out whether the graph is complete or not
     cout << "9. Quit" << endl; //Exits the program
 
-    cout << "Enter the number of vertices this graph contain: ";
+    cout << "Enter the number of vertices this graph contains: ";
     cin >> v;
-    Graph G(v);
     cout << v << endl;
+    while (v > MAX || v < 1) {
+        cout << "Choose a value between 1 and 100." << endl;
+        cout << "Enter the number of vertices this graph contains: ";
+        cin >> v;
+        cout << v << endl;
+    }
+    Graph G(v);
+    
     cout << "Enter a number 1-9 for your menu selection: ";
     cin >> selection;
     cout << selection << endl;
@@ -81,28 +88,28 @@ int main(int argc, char** argv) {
                 G.PrintAdjacent(v);
             }
                 break;
-            case '5':
-            {
-                cout << "Here are your vertices using Depth First Search: ";
-                G.PrintDepthFirst();
-            }
-                break;
-            case '6':
-            {
-                cout << "Here are your vertices using Breadth First Search: ";
-                G.PrintBreadthFirst();
-            }
-                break;
-            case '7':
-            {
-                cout << "Is graph connected?: " << G.IsConnected();
-            }
-                break;
-            case '8':
-            {
-                cout << "Is graph complete: " << G.IsComplete();
-            }
-                break;
+//            case '5':
+//            {
+//                cout << "Here are your vertices using Depth First Search: ";
+//                G.PrintDepthFirst();
+//            }
+//                break;
+//            case '6':
+//            {
+//                cout << "Here are your vertices using Breadth First Search: ";
+//                G.PrintBreadthFirst();
+//            }
+//                break;
+//            case '7':
+//            {
+//                cout << "Is graph connected?: " << G.IsConnected();
+//            }
+//                break;
+//            case '8':
+//            {
+//                cout << "Is graph complete: " << G.IsComplete();
+//            }
+//                break;
                 //If anything else is entered besides the current selections
             default: cout << "Invalid selection." << endl;
         }
